@@ -1,0 +1,13 @@
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Student student1 = new Student("이재준",27,177,89,"2015",4,4);
+		student1.show();
+		Teacher teacher1 = new Teacher("이재준",27,177,89,"2015",3000000,5);
+		teacher1.show();
+	}
+
+}
