@@ -7,24 +7,29 @@ public class Main {
 		
 		Scanner sc = new Scanner(System.in);
 		
-		int num1 = sc.nextInt();
-				
-		if(num1 > 89 && num1 < 101 ) {
-			System.out.println("A");
+		int H = sc.nextInt();
+		int M = sc.nextInt();
+		int C = sc.nextInt();
+		
+		if(M+C < 60) {
+			System.out.printf("%d %d",H,M+C);				
 		}
-		else if(num1 > 79 && num1 < 90) {
-			System.out.print("B");
-		}
-		else if(num1 > 69 && num1 < 80) {
-			System.out.println("C");
-		}
-		else if(num1 > 59 && num1 < 70) {
-			System.out.println("D");
+		else if(M+C == 60) {
+			if(H+1==24) {
+				System.out.printf("0 0",H+1);
+			}
+			else
+			System.out.printf("%d 0",H+1);
 		}
 		else {
-			System.out.println("F");
-		}
+			if((H+((M+C)/60))>23){
+				System.out.printf("%d %d",H+((M+C)/60)-24,((M+C)%60));
+			}
+			else
+			System.out.printf("%d %d",H+((M+C)/60),((M+C)%60));		
+		}	
 		
 	}
+	
 
 }
